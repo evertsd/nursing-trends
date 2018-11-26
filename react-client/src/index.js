@@ -1,8 +1,12 @@
+import Chart from 'chart.js';
 import React from 'react';
+import ReactChartkick from 'react-chartkick';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// ReactChartkick.addAdapter(Chart);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
