@@ -47,7 +47,10 @@ const individualProduced = (data, ave) => {
     total.data.push([d.date, +Number(p + n).toFixed(2)]);
   });
 
-  return [total, nursed, pumped, calculateLinearTrendline(total)];
+  return [
+    total, nursed, pumped,
+    calculateLinearTrendline(total, 'Trendline (total)'),
+  ];
 };
 
 const individualConsumed = (data, ave) => {
@@ -70,7 +73,6 @@ const individualConsumed = (data, ave) => {
   return [
     total, nursed, pumped, formula,
     calculateLinearTrendline(total, 'Trendline (total)'),
-    calculateLinearTrendline(formula, 'Trendline (formula)'),
   ];
 };
 
@@ -123,15 +125,15 @@ const withNursingRecords = (WrappedComponent) => (
       this.state = { nursingRecords: [] };
     }
 
+    componentDidMount() {
+      this.fetchRecords();
+    }
+
     fetchRecords = () => {
       const startDate = this.props.startDate ? this.props.startDate.value : undefined;
 
       fetchNursingRecords({ startDate })
         .then(nursingRecords => this.setState({ nursingRecords }));
-    }
-
-    componentDidMount() {
-      this.fetchRecords();
     }
 
     filtersChanged = (prevProps) => {

@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-// ReactChartkick.addAdapter(Chart);
+ReactChartkick.addAdapter(Chart);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

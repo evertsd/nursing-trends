@@ -467,4 +467,17 @@ export default [
     },
     formula: 8.5,
   },
+  {
+    date: new Date(2018, 10, 25),
+    nurse: {
+      minutes: 0,
+      times: 0,
+    },
+    pumped: {
+      consumed: 20.8,
+      produced: 22.7,
+      times: 6,
+    },
+    formula: 6.9,
+  }
 ]
