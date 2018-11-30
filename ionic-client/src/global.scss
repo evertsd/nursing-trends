@@ -9,3 +9,46 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+$grey-dark: #636363;
+$grey-darker: #5F5F5F;
+$grey-darkest: #3C3C3C;
+$grey-lightest: #F4F4F4;
+$grey-light: #B2B2B2;
+$grey-lighter: #E6E6E6;
+$white: #FFF;
+$black: #000;
+$blue: #3693C6;
+
+body, app-root, ion-content {
+  background: $grey-lighter;
+  --background: $grey-lighter;
+}
+
+button {
+  background-color: $white;
+  border: 1px solid;
+  border-color: $grey-darker;
+  border-radius: 1px;
+  color: $black;
+  padding: 0.5rem 1rem;
+
+  --webkit-appearance: 'none';
+
+  &.selected {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.btn-group {
+  display: 'flex';
+
+  button {
+    flex-grow: 1;
+  }
+
+  button:last-of-type {
+    border-left: none;
+  }
+}

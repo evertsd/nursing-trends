@@ -1,0 +1,10 @@
+@import 'src/global.scss';
+
+#chart-filters-container {
+  border-color: $grey-lightest;
+  background-color: $white;
+}
+
+ion-select {
+  border-color: $grey-lightest;
+}

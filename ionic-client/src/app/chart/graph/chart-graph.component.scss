@@ -1,0 +1,7 @@
+@import 'src/global.scss';
+
+#graph-container {
+  flex: '2 1 0';
+  border-color: $grey-lightest;
+  background-color: $white;
+}

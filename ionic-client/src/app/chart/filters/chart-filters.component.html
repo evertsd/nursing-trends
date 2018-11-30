@@ -1,0 +1,22 @@
+<div id="chart-filters-container" class="ba bw2 ph4 pt0 pb3">
+  <h2>Graph Options</h2>
+  <ion-label>Start date</ion-label>
+  <ion-select
+    class="ba br2 mv2 pr2 pl2"
+    placeholder="Select a date"
+    [value]="startDate"
+    (ionChange)="onChange($event)">
+    <ion-select-option *ngFor="let date of options" [value]="date.value">
+      {{date.label}}
+    </ion-select-option>
+  </ion-select>
+  <ion-label>Type</ion-label>
+  <div class="btn-group flex mt2">
+    <button
+      *ngFor="let type of series"
+      (click)="onSelectSeries(type.label)"
+      class="{{selectedSeries === type.label ? 'selected' : ''}}">
+      {{type.label}}
+    </button>
+  </div>
+</div>

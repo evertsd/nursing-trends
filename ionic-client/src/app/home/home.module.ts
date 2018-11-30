@@ -5,6 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { Navbar } from '../navbar/navbar.component';
+import { Chart } from '../chart/chart.component';
+import { ChartDateFilter } from '../chart/date-filter/chart-date-filter.component';
+import { ChartFilters } from '../chart/filters/chart-filters.component';
+import { ChartGraph } from '../chart/graph/chart-graph.component';
 
 @NgModule({
   imports: [
@@ -18,6 +23,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, Navbar, Chart, ChartFilters, ChartGraph, ChartDateFilter]
 })
 export class HomePageModule {}

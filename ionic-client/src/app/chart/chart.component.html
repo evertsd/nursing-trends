@@ -1,0 +1,14 @@
+<div class="flex pa4">
+  <chart-graph
+    [nursingRecords]="nursingRecords"
+    [series]="selectedSeries">
+  </chart-graph>
+  <chart-filters
+    class="ml5"
+    [startDate]="startDate"
+    [selectedSeries]="selectedSeries"
+    [nursingRecords]="nursingRecords"
+    (selectDate)="onDateSelected($event)"
+    (selectSeries)="onSelectSeries($event)">
+  </chart-filters>
+</div>
